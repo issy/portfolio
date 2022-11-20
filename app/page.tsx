@@ -1,16 +1,24 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 export default function Page() {
   return (
-    <div className='min-h-screen relative flex flex-col justify-center'>
-      <div className='bg-gray-500/20 p-6 shadow-xl mx-auto ring-1 ring-gray-900/5 rounded-lg'>
-        <div className='mx-auto max-w-md divide-x divide-gray-500'>
-          <div className='h-100 w-100 rounded-full'>
-            <img className='' src='https://avatars.githubusercontent.com/u/48881813' alt='profile picture'/>
-          </div>
-          <div>
-            <h2>Hi, I'm Issy</h2>
-          </div>
+    <div className="profile-card">
+
+        <div>
+          <img className="photo" src="https://avatars.githubusercontent.com/u/48881813" alt="profile photo"/>
         </div>
-      </div>
+
+        <div>
+          <h1 className='title'>Issy Szemeti</h1>
+          <span className="subtitle">Software Engineer</span>
+          <p>
+            Welcome to my portfolio. Here you can find information on my projects and hobbies
+          </p>
+          <p>
+            There's nothing here yet - please check back later
+          </p>
+        </div>
+
     </div>
   )
 }

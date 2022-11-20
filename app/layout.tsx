@@ -1,12 +1,10 @@
-import 'tailwindcss/tailwind.css';
-import Navbar from "@components/Navbar";
 import { ReactNode } from "react";
+import "styles/globals.scss";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html>
-      <body className='h-screen bg-black text-white'>
-        {/*<Navbar/>*/}
+      <body>
         {children}
       </body>
     </html>
