@@ -9,12 +9,8 @@ export default function Page() {
         <div>
           <h1 className='title'>Issy Szemeti</h1>
           <span className="subtitle">Software Engineer</span>
-          <p>
-            Welcome to my portfolio. Here you can find information on my projects and hobbies
-          </p>
-          <p>
-            There's nothing here yet - please check back later
-          </p>
+          <p>Welcome to my portfolio. Here you can find information about my projects</p>
+          <p>There's nothing here yet - please check back later</p>
         </div>
 
     </div>
