@@ -38,13 +38,11 @@ p {
   @media (min-width: $breakpoint-desktop) {
     max-width: 50vw;
     padding: 3rem;
-    background: green;
   }
 
   @media not (min-width: $breakpoint-desktop) {
     max-width: 90vw;
     padding: 2rem;
-    background: red;
   }
 
   &:first-child {
