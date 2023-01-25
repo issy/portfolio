@@ -1,91 +1,103 @@
 $bg-colour: black;
 $foreground-colour: rgb(107 114 128 / 0.2);
 $accent-colour: #ad1457;
+$breakpoint-mobile: 768px;
+$breakpoint-desktop: 1024px;
 
 body {
-    background: $bg-colour;
-    color: white;
-    font-family: sans-serif;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+  background: $bg-colour;
+  color: white;
+  font-family: sans-serif;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .title {
-    font-size: 2rem;
-    margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
 }
 
 p {
-    line-height: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .subtitle {
-    color: gray;
-    line-height: 1rem;
-    margin-top: 0;
+  color: gray;
+  line-height: 1rem;
+  margin-top: 0;
 }
 
 .profile-card {
-    background: $foreground-colour;
-    padding: 3rem;
-    border-radius: 2rem;
+  background: $foreground-colour;
+  border-radius: 2rem;
+  display: flex;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+
+  @media (min-width: $breakpoint-desktop) {
     max-width: 50vw;
-    display: flex;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    padding: 3rem;
+    background: green;
+  }
 
-    &:first-child {
-        flex-grow: 1;
-    }
+  @media not (min-width: $breakpoint-desktop) {
+    max-width: 90vw;
+    padding: 2rem;
+    background: red;
+  }
 
-    &:nth-child(2) {
-        flex-grow: 3;
-    }
+  &:first-child {
+    flex-grow: 1;
+  }
 
-    & > :not(:first-child) {
-        padding-left: 2rem;
-        border-left: 2px solid gray;
-    }
+  &:nth-child(2) {
+    flex-grow: 3;
+  }
+
+  & > :not(:first-child) {
+    padding-left: 2rem;
+    border-left: 2px solid gray;
+  }
 }
 
 .photo {
-    border-radius: 100%;
-    margin-right: 2rem;
-    max-width: 200px;
+  border-radius: 100%;
+  margin-right: 2rem;
+  max-width: 200px;
 }
 
 button {
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-items: center;
-    height: 2rem;
-    padding: 0 1rem;
-    color: white;
-    border: 2px solid $accent-colour;
-    background-color: $accent-colour;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    margin-right: 0.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+  height: 2rem;
+  padding: 0 1rem;
+  color: white;
+  border: 2px solid $accent-colour;
+  background-color: $accent-colour;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  margin-right: 0.5rem;
 
-    &:active {
-        background-color: $accent-colour;
-        filter: brightness(85%);
-    }
+  &:active {
+    background-color: $accent-colour;
+    filter: brightness(85%);
+  }
 }
 
 .link {
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-items: center;
-    height: 2rem;
-    padding: 0 1rem;
-    color: white;
-    margin-right: 0.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+  height: 2rem;
+  padding: 0 1rem;
+  color: white;
+  margin-right: 0.5rem;
 
-    &:hover {
-        border-bottom: 2px solid $accent-colour;
-    }
+  &:hover {
+    border-bottom: 2px solid $accent-colour;
+  }
 }
